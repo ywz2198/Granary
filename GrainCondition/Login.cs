@@ -49,14 +49,20 @@ namespace GrainCondition
 
                 if (dr.Read())
                 {
-
-                    MainForm  form = new MainForm(); //有没有参数得看你 Form2 的构造函数怎么写的了
+                    this.Hide();
+                    MainForm  form = new MainForm(); 
                     form.Show();
+                    con.Close();
+                    
+                    
+
+
 
                 }
                 else {
-                    MessageBox.Show("Fuckyou");
+                    MessageBox.Show("密码错误");
                 }
+                
             }
             else
                 MessageBox.Show("Fill the blanks");

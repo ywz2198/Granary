@@ -16,5 +16,26 @@ namespace GrainCondition
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SystemConfig sys = new SystemConfig();
+            sys.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WindControl wind = new WindControl();
+            bool win = wind.Enabled;
+            if (!win )
+            wind.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            History his = new History() ;
+            if(his!=null)
+            his.Show();
+        }
     }
 }
