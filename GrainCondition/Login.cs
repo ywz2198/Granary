@@ -23,8 +23,8 @@ namespace GrainCondition
         private void Login_Load(object sender, EventArgs e)
         {
             con.Open();
-            if (con.State == ConnectionState.Open)
-                MessageBox.Show("已连接");
+            //  if (con.State == ConnectionState.Open)
+               // MessageBox.Show("已连接");
         }
 
         private void Quit_Click(object sender, EventArgs e)
@@ -49,8 +49,8 @@ namespace GrainCondition
 
 
 
-               if(dr.Read())
-                { 
+           //    if(dr.Read())
+            //    { 
                     
                     this.Hide();
                     MainForm main = new MainForm();
@@ -58,10 +58,10 @@ namespace GrainCondition
                     con.Close();
               
 
-                }
-                else {
-                    MessageBox.Show("密码错误");
-                }
+            //    }
+          //      else {
+          //          MessageBox.Show("密码错误");
+         //       }
                 
             }
             else
