@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace GrainCondition {
+namespace GrainCondition.source {
     
     
     /// <summary>
@@ -721,7 +721,7 @@ namespace GrainCondition {
         }
     }
 }
-namespace GrainCondition.SensorDataSetTableAdapters {
+namespace GrainCondition.source.SensorDataSetTableAdapters {
     
     
     /// <summary>

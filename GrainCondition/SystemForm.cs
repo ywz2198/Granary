@@ -43,6 +43,10 @@ namespace GrainCondition
             this.sensorTableAdapter.Fill(this.sensorDataSet.Sensor);
             // TODO: 这行代码将数据加载到表“grainDataSet.Storage”中。您可以根据需要移动或删除它。
             this.storageTableAdapter.Fill(this.grainDataSet.Storage);
+            //端口
+            string[] ports = SerialPort.GetPortNames();
+            comboBox2.Items.AddRange(ports);
+            
 
         }
 
