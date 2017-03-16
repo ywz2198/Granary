@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="source\GrainDataSet.Designer.cs">
+    <Compile Include="GrainDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GrainDataSet.xsd</DependentUpon>
@@ -70,7 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="source\SensorDataSet.Designer.cs">
+    <Compile Include="GrainDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrainDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SensorDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SensorDataSet.xsd</DependentUpon>
@@ -111,15 +116,15 @@
     <EmbeddedResource Include="WindControl.resx">
       <DependentUpon>WindControl.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="source\GrainDataSet.xsc">
+    <None Include="GrainDataSet.xsc">
       <DependentUpon>GrainDataSet.xsd</DependentUpon>
     </None>
-    <None Include="source\GrainDataSet.xsd">
+    <None Include="GrainDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>GrainDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>GrainDataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="source\GrainDataSet.xss">
+    <None Include="GrainDataSet.xss">
       <DependentUpon>GrainDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -131,23 +136,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="source\SensorDataSet.xsc">
+    <None Include="SensorDataSet.xsc">
       <DependentUpon>SensorDataSet.xsd</DependentUpon>
     </None>
-    <None Include="source\SensorDataSet.xsd">
+    <None Include="SensorDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SensorDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="source\SensorDataSet.xss">
+    <None Include="SensorDataSet.xss">
       <DependentUpon>SensorDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="source\App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="source\Config.xml" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
