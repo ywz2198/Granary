@@ -12,9 +12,26 @@ namespace GrainCondition
 {
     public partial class WindControl : Form
     {
-        public WindControl()
+        
+        public  WindControl()
         {
             InitializeComponent();
+        }
+        private static WindControl frm = new WindControl();
+        public static WindControl wind()
+        {
+            if (frm.IsDisposed)
+            {
+                frm = new WindControl();
+                return frm;
+            }
+            else
+                return frm;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

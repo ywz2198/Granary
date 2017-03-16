@@ -16,8 +16,10 @@ namespace GrainCondition
         public Login()
         {
             InitializeComponent();
+            MainForm form = new MainForm();
+            form.Hide();
         }
-
+        
         private void Login_Load(object sender, EventArgs e)
         {
             con.Open();
@@ -47,16 +49,14 @@ namespace GrainCondition
 
 
 
-                if (dr.Read())
-                {
+               if(dr.Read())
+                { 
+                    
                     this.Hide();
-                    MainForm  form = new MainForm(); 
-                    form.Show();
+                    MainForm main = new MainForm();
+                    main.Show();
                     con.Close();
-                    
-                    
-
-
+              
 
                 }
                 else {
@@ -66,6 +66,50 @@ namespace GrainCondition
             }
             else
                 MessageBox.Show("Fill the blanks");
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (ID.Text != "" && Password.Text != "")
+                {
+
+                    SqlCommand mycmd = new SqlCommand("Login", con);
+                    mycmd.CommandType = CommandType.StoredProcedure;
+                    SqlParameter paramID = new SqlParameter("@ID", SqlDbType.NChar, 10);
+                    paramID.Value = ID.Text;
+                    mycmd.Parameters.Add(paramID);
+                    SqlParameter paramPassword = new SqlParameter("@Password", SqlDbType.NVarChar, 50);
+                    paramPassword.Value = Password.Text;
+                    mycmd.Parameters.Add(paramPassword);
+                    SqlDataReader dr = mycmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+
+
+                    if (dr.Read())
+                    {
+
+                        this.Hide();
+                        MainForm main = new MainForm();
+                        main.Show();
+                        con.Close();
+
+
+                    }
+                    else {
+                        MessageBox.Show("密码错误");
+                    }
+
+                }
+                else
+                    MessageBox.Show("Fill the blanks");
+            }
         }
     }
 }

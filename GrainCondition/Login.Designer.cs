@@ -67,6 +67,8 @@
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(100, 25);
             this.Password.TabIndex = 3;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
+            this.Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Password_KeyDown);
             // 
             // Login
             // 

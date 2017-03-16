@@ -16,7 +16,17 @@ namespace GrainCondition
         {
             InitializeComponent();
         }
-
+        private static History  frm = new History  ();
+        public static History  wind()
+        {
+            if (frm.IsDisposed)
+            {
+                frm = new History ();
+                return frm;
+            }
+            else
+                return frm;
+        }
         private void History_Load(object sender, EventArgs e)
         {
 

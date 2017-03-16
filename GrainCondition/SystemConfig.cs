@@ -12,9 +12,21 @@ namespace GrainCondition
 {
     public partial class SystemConfig : Form
     {
+
         public SystemConfig()
         {
             InitializeComponent();
+        }
+        private static SystemConfig  frm = new SystemConfig ();
+        public static SystemConfig  wind()
+        {
+            if (frm.IsDisposed)
+            {
+                frm = new SystemConfig ();
+                return frm;
+            }
+            else
+                return frm;
         }
     }
 }
