@@ -45,5 +45,17 @@ namespace GrainCondition
         {
             Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Video .wind().Show();
+            Video .wind().Activate();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Power .wind().Show();
+            Power .wind().Activate();
+        }
     }
 }

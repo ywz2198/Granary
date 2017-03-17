@@ -83,7 +83,17 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
               <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
               <Mapping SourceColumn="TypeOfSensor" DataSetColumn="TypeOfSensor" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="GranaryConnectionGrain (Settings)" DbObjectName="Granary.dbo.History" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM dbo.History
+Order By Time DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -93,7 +103,7 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
   <xs:element name="GranaryDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GranaryDataSet2" msprop:Generator_UserDSName="GranaryDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="History" msprop:Generator_TableClassName="HistoryDataTable" msprop:Generator_TableVarName="tableHistory" msprop:Generator_TablePropName="History" msprop:Generator_RowDeletingName="HistoryRowDeleting" msprop:Generator_RowChangingName="HistoryRowChanging" msprop:Generator_RowEvHandlerName="HistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoryRowDeleted" msprop:Generator_UserTableName="History" msprop:Generator_RowChangedName="HistoryRowChanged" msprop:Generator_RowEvArgName="HistoryRowChangeEvent" msprop:Generator_RowClassName="HistoryRow">
+        <xs:element name="History" msprop:Generator_TableClassName="HistoryDataTable" msprop:Generator_TableVarName="tableHistory" msprop:Generator_RowChangedName="HistoryRowChanged" msprop:Generator_TablePropName="History" msprop:Generator_RowDeletingName="HistoryRowDeleting" msprop:Generator_RowChangingName="HistoryRowChanging" msprop:Generator_RowEvHandlerName="HistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoryRowDeleted" msprop:Generator_RowClassName="HistoryRow" msprop:Generator_UserTableName="History" msprop:Generator_RowEvArgName="HistoryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DataNumber" msprop:Generator_ColumnVarNameInTable="columnDataNumber" msprop:Generator_ColumnPropNameInRow="DataNumber" msprop:Generator_ColumnPropNameInTable="DataNumberColumn" msprop:Generator_UserColumnName="DataNumber">

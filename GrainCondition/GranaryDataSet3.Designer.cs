@@ -20,17 +20,17 @@ namespace GrainCondition {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GranaryDataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GranaryDataSet3")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GranaryDataSet2 : global::System.Data.DataSet {
+    public partial class GranaryDataSet3 : global::System.Data.DataSet {
         
-        private HistoryDataTable tableHistory;
+        private AlarmHistoryDataTable tableAlarmHistory;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public GranaryDataSet2() {
+        public GranaryDataSet3() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GrainCondition {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected GranaryDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GranaryDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace GrainCondition {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["History"] != null)) {
-                    base.Tables.Add(new HistoryDataTable(ds.Tables["History"]));
+                if ((ds.Tables["AlarmHistory"] != null)) {
+                    base.Tables.Add(new AlarmHistoryDataTable(ds.Tables["AlarmHistory"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GrainCondition {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public HistoryDataTable History {
+        public AlarmHistoryDataTable AlarmHistory {
             get {
-                return this.tableHistory;
+                return this.tableAlarmHistory;
             }
         }
         
@@ -127,7 +127,7 @@ namespace GrainCondition {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GranaryDataSet2 cln = ((GranaryDataSet2)(base.Clone()));
+            GranaryDataSet3 cln = ((GranaryDataSet3)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace GrainCondition {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["History"] != null)) {
-                    base.Tables.Add(new HistoryDataTable(ds.Tables["History"]));
+                if ((ds.Tables["AlarmHistory"] != null)) {
+                    base.Tables.Add(new AlarmHistoryDataTable(ds.Tables["AlarmHistory"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GrainCondition {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableHistory = ((HistoryDataTable)(base.Tables["History"]));
+            this.tableAlarmHistory = ((AlarmHistoryDataTable)(base.Tables["AlarmHistory"]));
             if ((initTable == true)) {
-                if ((this.tableHistory != null)) {
-                    this.tableHistory.InitVars();
+                if ((this.tableAlarmHistory != null)) {
+                    this.tableAlarmHistory.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace GrainCondition {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GranaryDataSet2";
+            this.DataSetName = "GranaryDataSet3";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GranaryDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/GranaryDataSet3.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableHistory = new HistoryDataTable();
-            base.Tables.Add(this.tableHistory);
+            this.tableAlarmHistory = new AlarmHistoryDataTable();
+            base.Tables.Add(this.tableAlarmHistory);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeHistory() {
+        private bool ShouldSerializeAlarmHistory() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GrainCondition {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GranaryDataSet2 ds = new GranaryDataSet2();
+            GranaryDataSet3 ds = new GranaryDataSet3();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,22 +270,22 @@ namespace GrainCondition {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void HistoryRowChangeEventHandler(object sender, HistoryRowChangeEvent e);
+        public delegate void AlarmHistoryRowChangeEventHandler(object sender, AlarmHistoryRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class HistoryDataTable : global::System.Data.TypedTableBase<HistoryRow> {
+        public partial class AlarmHistoryDataTable : global::System.Data.TypedTableBase<AlarmHistoryRow> {
             
-            private global::System.Data.DataColumn columnDataNumber;
-            
-            private global::System.Data.DataColumn columnSensorID;
+            private global::System.Data.DataColumn columnNo;
             
             private global::System.Data.DataColumn columnData;
             
-            private global::System.Data.DataColumn columnTime;
+            private global::System.Data.DataColumn columnGranaryID;
+            
+            private global::System.Data.DataColumn columnLocation;
             
             private global::System.Data.DataColumn columnUnit;
             
@@ -293,8 +293,8 @@ namespace GrainCondition {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HistoryDataTable() {
-                this.TableName = "History";
+            public AlarmHistoryDataTable() {
+                this.TableName = "AlarmHistory";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +302,7 @@ namespace GrainCondition {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal HistoryDataTable(global::System.Data.DataTable table) {
+            internal AlarmHistoryDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,24 +319,16 @@ namespace GrainCondition {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected HistoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AlarmHistoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DataNumberColumn {
+            public global::System.Data.DataColumn NoColumn {
                 get {
-                    return this.columnDataNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SensorIDColumn {
-                get {
-                    return this.columnSensorID;
+                    return this.columnNo;
                 }
             }
             
@@ -350,9 +342,17 @@ namespace GrainCondition {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TimeColumn {
+            public global::System.Data.DataColumn GranaryIDColumn {
                 get {
-                    return this.columnTime;
+                    return this.columnGranaryID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LocationColumn {
+                get {
+                    return this.columnLocation;
                 }
             }
             
@@ -383,57 +383,57 @@ namespace GrainCondition {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HistoryRow this[int index] {
+            public AlarmHistoryRow this[int index] {
                 get {
-                    return ((HistoryRow)(this.Rows[index]));
+                    return ((AlarmHistoryRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowChanging;
+            public event AlarmHistoryRowChangeEventHandler AlarmHistoryRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowChanged;
+            public event AlarmHistoryRowChangeEventHandler AlarmHistoryRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowDeleting;
+            public event AlarmHistoryRowChangeEventHandler AlarmHistoryRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowDeleted;
+            public event AlarmHistoryRowChangeEventHandler AlarmHistoryRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddHistoryRow(HistoryRow row) {
+            public void AddAlarmHistoryRow(AlarmHistoryRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HistoryRow AddHistoryRow(string DataNumber, string SensorID, string Data, System.DateTime Time, string Unit, string TypeOfSensor) {
-                HistoryRow rowHistoryRow = ((HistoryRow)(this.NewRow()));
+            public AlarmHistoryRow AddAlarmHistoryRow(string Data, int GranaryID, string Location, string Unit, string TypeOfSensor) {
+                AlarmHistoryRow rowAlarmHistoryRow = ((AlarmHistoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        DataNumber,
-                        SensorID,
+                        null,
                         Data,
-                        Time,
+                        GranaryID,
+                        Location,
                         Unit,
                         TypeOfSensor};
-                rowHistoryRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowHistoryRow);
-                return rowHistoryRow;
+                rowAlarmHistoryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAlarmHistoryRow);
+                return rowAlarmHistoryRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HistoryRow FindByDataNumber(string DataNumber) {
-                return ((HistoryRow)(this.Rows.Find(new object[] {
-                            DataNumber})));
+            public AlarmHistoryRow FindByNo(int No) {
+                return ((AlarmHistoryRow)(this.Rows.Find(new object[] {
+                            No})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                HistoryDataTable cln = ((HistoryDataTable)(base.Clone()));
+                AlarmHistoryDataTable cln = ((AlarmHistoryDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,16 +441,16 @@ namespace GrainCondition {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new HistoryDataTable();
+                return new AlarmHistoryDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnDataNumber = base.Columns["DataNumber"];
-                this.columnSensorID = base.Columns["SensorID"];
+                this.columnNo = base.Columns["No"];
                 this.columnData = base.Columns["Data"];
-                this.columnTime = base.Columns["Time"];
+                this.columnGranaryID = base.Columns["GranaryID"];
+                this.columnLocation = base.Columns["Location"];
                 this.columnUnit = base.Columns["Unit"];
                 this.columnTypeOfSensor = base.Columns["TypeOfSensor"];
             }
@@ -458,53 +458,56 @@ namespace GrainCondition {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnDataNumber = new global::System.Data.DataColumn("DataNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDataNumber);
-                this.columnSensorID = new global::System.Data.DataColumn("SensorID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSensorID);
+                this.columnNo = new global::System.Data.DataColumn("No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNo);
                 this.columnData = new global::System.Data.DataColumn("Data", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData);
-                this.columnTime = new global::System.Data.DataColumn("Time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTime);
+                this.columnGranaryID = new global::System.Data.DataColumn("GranaryID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGranaryID);
+                this.columnLocation = new global::System.Data.DataColumn("Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocation);
                 this.columnUnit = new global::System.Data.DataColumn("Unit", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnit);
                 this.columnTypeOfSensor = new global::System.Data.DataColumn("TypeOfSensor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTypeOfSensor);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnDataNumber}, true));
-                this.columnDataNumber.AllowDBNull = false;
-                this.columnDataNumber.Unique = true;
-                this.columnDataNumber.MaxLength = 50;
-                this.columnSensorID.MaxLength = 50;
+                                this.columnNo}, true));
+                this.columnNo.AutoIncrement = true;
+                this.columnNo.AutoIncrementSeed = -1;
+                this.columnNo.AutoIncrementStep = -1;
+                this.columnNo.AllowDBNull = false;
+                this.columnNo.ReadOnly = true;
+                this.columnNo.Unique = true;
                 this.columnData.MaxLength = 50;
+                this.columnLocation.MaxLength = 50;
                 this.columnUnit.MaxLength = 10;
                 this.columnTypeOfSensor.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HistoryRow NewHistoryRow() {
-                return ((HistoryRow)(this.NewRow()));
+            public AlarmHistoryRow NewAlarmHistoryRow() {
+                return ((AlarmHistoryRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new HistoryRow(builder);
+                return new AlarmHistoryRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(HistoryRow);
+                return typeof(AlarmHistoryRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.HistoryRowChanged != null)) {
-                    this.HistoryRowChanged(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
+                if ((this.AlarmHistoryRowChanged != null)) {
+                    this.AlarmHistoryRowChanged(this, new AlarmHistoryRowChangeEvent(((AlarmHistoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -512,8 +515,8 @@ namespace GrainCondition {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.HistoryRowChanging != null)) {
-                    this.HistoryRowChanging(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
+                if ((this.AlarmHistoryRowChanging != null)) {
+                    this.AlarmHistoryRowChanging(this, new AlarmHistoryRowChangeEvent(((AlarmHistoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -521,8 +524,8 @@ namespace GrainCondition {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.HistoryRowDeleted != null)) {
-                    this.HistoryRowDeleted(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
+                if ((this.AlarmHistoryRowDeleted != null)) {
+                    this.AlarmHistoryRowDeleted(this, new AlarmHistoryRowChangeEvent(((AlarmHistoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -530,14 +533,14 @@ namespace GrainCondition {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.HistoryRowDeleting != null)) {
-                    this.HistoryRowDeleting(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
+                if ((this.AlarmHistoryRowDeleting != null)) {
+                    this.AlarmHistoryRowDeleting(this, new AlarmHistoryRowChangeEvent(((AlarmHistoryRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveHistoryRow(HistoryRow row) {
+            public void RemoveAlarmHistoryRow(AlarmHistoryRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -546,7 +549,7 @@ namespace GrainCondition {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GranaryDataSet2 ds = new GranaryDataSet2();
+                GranaryDataSet3 ds = new GranaryDataSet3();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -564,7 +567,7 @@ namespace GrainCondition {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "HistoryDataTable";
+                attribute2.FixedValue = "AlarmHistoryDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -608,41 +611,25 @@ namespace GrainCondition {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class HistoryRow : global::System.Data.DataRow {
+        public partial class AlarmHistoryRow : global::System.Data.DataRow {
             
-            private HistoryDataTable tableHistory;
+            private AlarmHistoryDataTable tableAlarmHistory;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal HistoryRow(global::System.Data.DataRowBuilder rb) : 
+            internal AlarmHistoryRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableHistory = ((HistoryDataTable)(this.Table));
+                this.tableAlarmHistory = ((AlarmHistoryDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DataNumber {
+            public int No {
                 get {
-                    return ((string)(this[this.tableHistory.DataNumberColumn]));
+                    return ((int)(this[this.tableAlarmHistory.NoColumn]));
                 }
                 set {
-                    this[this.tableHistory.DataNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SensorID {
-                get {
-                    try {
-                        return ((string)(this[this.tableHistory.SensorIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“History”中列“SensorID”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tableHistory.SensorIDColumn] = value;
+                    this[this.tableAlarmHistory.NoColumn] = value;
                 }
             }
             
@@ -651,30 +638,46 @@ namespace GrainCondition {
             public string Data {
                 get {
                     try {
-                        return ((string)(this[this.tableHistory.DataColumn]));
+                        return ((string)(this[this.tableAlarmHistory.DataColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“History”中列“Data”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“AlarmHistory”中列“Data”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableHistory.DataColumn] = value;
+                    this[this.tableAlarmHistory.DataColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Time {
+            public int GranaryID {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableHistory.TimeColumn]));
+                        return ((int)(this[this.tableAlarmHistory.GranaryIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“History”中列“Time”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“AlarmHistory”中列“GranaryID”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableHistory.TimeColumn] = value;
+                    this[this.tableAlarmHistory.GranaryIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Location {
+                get {
+                    try {
+                        return ((string)(this[this.tableAlarmHistory.LocationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“AlarmHistory”中列“Location”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableAlarmHistory.LocationColumn] = value;
                 }
             }
             
@@ -683,14 +686,14 @@ namespace GrainCondition {
             public string Unit {
                 get {
                     try {
-                        return ((string)(this[this.tableHistory.UnitColumn]));
+                        return ((string)(this[this.tableAlarmHistory.UnitColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“History”中列“Unit”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“AlarmHistory”中列“Unit”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableHistory.UnitColumn] = value;
+                    this[this.tableAlarmHistory.UnitColumn] = value;
                 }
             }
             
@@ -699,75 +702,75 @@ namespace GrainCondition {
             public string TypeOfSensor {
                 get {
                     try {
-                        return ((string)(this[this.tableHistory.TypeOfSensorColumn]));
+                        return ((string)(this[this.tableAlarmHistory.TypeOfSensorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“History”中列“TypeOfSensor”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“AlarmHistory”中列“TypeOfSensor”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableHistory.TypeOfSensorColumn] = value;
+                    this[this.tableAlarmHistory.TypeOfSensorColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSensorIDNull() {
-                return this.IsNull(this.tableHistory.SensorIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSensorIDNull() {
-                this[this.tableHistory.SensorIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDataNull() {
-                return this.IsNull(this.tableHistory.DataColumn);
+                return this.IsNull(this.tableAlarmHistory.DataColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDataNull() {
-                this[this.tableHistory.DataColumn] = global::System.Convert.DBNull;
+                this[this.tableAlarmHistory.DataColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTimeNull() {
-                return this.IsNull(this.tableHistory.TimeColumn);
+            public bool IsGranaryIDNull() {
+                return this.IsNull(this.tableAlarmHistory.GranaryIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTimeNull() {
-                this[this.tableHistory.TimeColumn] = global::System.Convert.DBNull;
+            public void SetGranaryIDNull() {
+                this[this.tableAlarmHistory.GranaryIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLocationNull() {
+                return this.IsNull(this.tableAlarmHistory.LocationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLocationNull() {
+                this[this.tableAlarmHistory.LocationColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsUnitNull() {
-                return this.IsNull(this.tableHistory.UnitColumn);
+                return this.IsNull(this.tableAlarmHistory.UnitColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetUnitNull() {
-                this[this.tableHistory.UnitColumn] = global::System.Convert.DBNull;
+                this[this.tableAlarmHistory.UnitColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTypeOfSensorNull() {
-                return this.IsNull(this.tableHistory.TypeOfSensorColumn);
+                return this.IsNull(this.tableAlarmHistory.TypeOfSensorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTypeOfSensorNull() {
-                this[this.tableHistory.TypeOfSensorColumn] = global::System.Convert.DBNull;
+                this[this.tableAlarmHistory.TypeOfSensorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -775,22 +778,22 @@ namespace GrainCondition {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class HistoryRowChangeEvent : global::System.EventArgs {
+        public class AlarmHistoryRowChangeEvent : global::System.EventArgs {
             
-            private HistoryRow eventRow;
+            private AlarmHistoryRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HistoryRowChangeEvent(HistoryRow row, global::System.Data.DataRowAction action) {
+            public AlarmHistoryRowChangeEvent(AlarmHistoryRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HistoryRow Row {
+            public AlarmHistoryRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -806,7 +809,7 @@ namespace GrainCondition {
         }
     }
 }
-namespace GrainCondition.GranaryDataSet2TableAdapters {
+namespace GrainCondition.GranaryDataSet3TableAdapters {
     
     
     /// <summary>
@@ -818,7 +821,7 @@ namespace GrainCondition.GranaryDataSet2TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class HistoryTableAdapter : global::System.ComponentModel.Component {
+    public partial class AlarmHistoryTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -832,7 +835,7 @@ namespace GrainCondition.GranaryDataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public HistoryTableAdapter() {
+        public AlarmHistoryTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -929,62 +932,61 @@ namespace GrainCondition.GranaryDataSet2TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "History";
-            tableMapping.ColumnMappings.Add("DataNumber", "DataNumber");
-            tableMapping.ColumnMappings.Add("SensorID", "SensorID");
+            tableMapping.DataSetTable = "AlarmHistory";
+            tableMapping.ColumnMappings.Add("No", "No");
             tableMapping.ColumnMappings.Add("Data", "Data");
-            tableMapping.ColumnMappings.Add("Time", "Time");
+            tableMapping.ColumnMappings.Add("GranaryID", "GranaryID");
+            tableMapping.ColumnMappings.Add("Location", "Location");
             tableMapping.ColumnMappings.Add("Unit", "Unit");
             tableMapping.ColumnMappings.Add("TypeOfSensor", "TypeOfSensor");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[History] WHERE (([DataNumber] = @Original_DataNumber) AND ((@IsNull_SensorID = 1 AND [SensorID] IS NULL) OR ([SensorID] = @Original_SensorID)) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Unit = 1 AND [Unit] IS NULL) OR ([Unit] = @Original_Unit)) AND ((@IsNull_TypeOfSensor = 1 AND [TypeOfSensor] IS NULL) OR ([TypeOfSensor] = @Original_TypeOfSensor)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[AlarmHistory] WHERE (([No] = @Original_No) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_GranaryID = 1 AND [GranaryID] IS NULL) OR ([GranaryID] = @Original_GranaryID)) AND ((@IsNull_Location = 1 AND [Location] IS NULL) OR ([Location] = @Original_Location)) AND ((@IsNull_Unit = 1 AND [Unit] IS NULL) OR ([Unit] = @Original_Unit)) AND ((@IsNull_TypeOfSensor = 1 AND [TypeOfSensor] IS NULL) OR ([TypeOfSensor] = @Original_TypeOfSensor)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SensorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SensorID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GranaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GranaryID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GranaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GranaryID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Location", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Unit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Unit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Unit", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Unit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TypeOfSensor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeOfSensor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeOfSensor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeOfSensor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[History] ([DataNumber], [SensorID], [Data], [Time], [Unit], [TypeOfSensor]) VALUES (@DataNumber, @SensorID, @Data, @Time, @Unit, @TypeOfSensor);
-SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (DataNumber = @DataNumber)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[AlarmHistory] ([Data], [GranaryID], [Location], [Unit], [TypeOfSensor]) VALUES (@Data, @GranaryID, @Location, @Unit, @TypeOfSensor);
+SELECT No, Data, GranaryID, Location, Unit, TypeOfSensor FROM AlarmHistory WHERE (No = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SensorID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GranaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GranaryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Unit", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Unit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeOfSensor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeOfSensor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[History] SET [DataNumber] = @DataNumber, [SensorID] = @SensorID, [Data] = @Data, [Time] = @Time, [Unit] = @Unit, [TypeOfSensor] = @TypeOfSensor WHERE (([DataNumber] = @Original_DataNumber) AND ((@IsNull_SensorID = 1 AND [SensorID] IS NULL) OR ([SensorID] = @Original_SensorID)) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Time = 1 AND [Time] IS NULL) OR ([Time] = @Original_Time)) AND ((@IsNull_Unit = 1 AND [Unit] IS NULL) OR ([Unit] = @Original_Unit)) AND ((@IsNull_TypeOfSensor = 1 AND [TypeOfSensor] IS NULL) OR ([TypeOfSensor] = @Original_TypeOfSensor)));
-SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (DataNumber = @DataNumber)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AlarmHistory] SET [Data] = @Data, [GranaryID] = @GranaryID, [Location] = @Location, [Unit] = @Unit, [TypeOfSensor] = @TypeOfSensor WHERE (([No] = @Original_No) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_GranaryID = 1 AND [GranaryID] IS NULL) OR ([GranaryID] = @Original_GranaryID)) AND ((@IsNull_Location = 1 AND [Location] IS NULL) OR ([Location] = @Original_Location)) AND ((@IsNull_Unit = 1 AND [Unit] IS NULL) OR ([Unit] = @Original_Unit)) AND ((@IsNull_TypeOfSensor = 1 AND [TypeOfSensor] IS NULL) OR ([TypeOfSensor] = @Original_TypeOfSensor)));
+SELECT No, Data, GranaryID, Location, Unit, TypeOfSensor FROM AlarmHistory WHERE (No = @No)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SensorID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GranaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GranaryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Unit", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Unit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeOfSensor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeOfSensor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SensorID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SensorID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Time", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GranaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GranaryID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GranaryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GranaryID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Location", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Unit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Unit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Unit", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Unit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TypeOfSensor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeOfSensor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeOfSensor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeOfSensor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@No", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -997,23 +999,18 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM dbo.History";
+            this._commandCollection[0].CommandText = "SELECT No, Data, GranaryID, Location, Unit, TypeOfSensor FROM dbo.AlarmHistory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM dbo.History\r\nOrd" +
-                "er By Time DESC";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GranaryDataSet2.HistoryDataTable dataTable) {
+        public virtual int Fill(GranaryDataSet3.AlarmHistoryDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1026,9 +1023,9 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GranaryDataSet2.HistoryDataTable GetData() {
+        public virtual GranaryDataSet3.AlarmHistoryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GranaryDataSet2.HistoryDataTable dataTable = new GranaryDataSet2.HistoryDataTable();
+            GranaryDataSet3.AlarmHistoryDataTable dataTable = new GranaryDataSet3.AlarmHistoryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1036,28 +1033,15 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(GranaryDataSet2.HistoryDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GranaryDataSet2.HistoryDataTable dataTable) {
+        public virtual int Update(GranaryDataSet3.AlarmHistoryDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GranaryDataSet2 dataSet) {
-            return this.Adapter.Update(dataSet, "History");
+        public virtual int Update(GranaryDataSet3 dataSet) {
+            return this.Adapter.Update(dataSet, "AlarmHistory");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1079,36 +1063,31 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_DataNumber, string Original_SensorID, string Original_Data, global::System.Nullable<global::System.DateTime> Original_Time, string Original_Unit, string Original_TypeOfSensor) {
-            if ((Original_DataNumber == null)) {
-                throw new global::System.ArgumentNullException("Original_DataNumber");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_DataNumber));
-            }
-            if ((Original_SensorID == null)) {
+        public virtual int Delete(int Original_No, string Original_Data, global::System.Nullable<int> Original_GranaryID, string Original_Location, string Original_Unit, string Original_TypeOfSensor) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_No));
+            if ((Original_Data == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_SensorID));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Data));
             }
-            if ((Original_Data == null)) {
+            if ((Original_GranaryID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_GranaryID.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Data));
-            }
-            if ((Original_Time.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Time.Value));
-            }
-            else {
+            if ((Original_Location == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Location));
             }
             if ((Original_Unit == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
@@ -1146,42 +1125,36 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string DataNumber, string SensorID, string Data, global::System.Nullable<global::System.DateTime> Time, string Unit, string TypeOfSensor) {
-            if ((DataNumber == null)) {
-                throw new global::System.ArgumentNullException("DataNumber");
+        public virtual int Insert(string Data, global::System.Nullable<int> GranaryID, string Location, string Unit, string TypeOfSensor) {
+            if ((Data == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DataNumber));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Data));
             }
-            if ((SensorID == null)) {
+            if ((GranaryID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(GranaryID.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SensorID));
-            }
-            if ((Data == null)) {
+            if ((Location == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Data));
-            }
-            if ((Time.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Time.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Location));
             }
             if ((Unit == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Unit));
+            }
+            if ((TypeOfSensor == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Unit));
-            }
-            if ((TypeOfSensor == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(TypeOfSensor));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(TypeOfSensor));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1203,89 +1176,79 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DataNumber, string SensorID, string Data, global::System.Nullable<global::System.DateTime> Time, string Unit, string TypeOfSensor, string Original_DataNumber, string Original_SensorID, string Original_Data, global::System.Nullable<global::System.DateTime> Original_Time, string Original_Unit, string Original_TypeOfSensor) {
-            if ((DataNumber == null)) {
-                throw new global::System.ArgumentNullException("DataNumber");
+        public virtual int Update(string Data, global::System.Nullable<int> GranaryID, string Location, string Unit, string TypeOfSensor, int Original_No, string Original_Data, global::System.Nullable<int> Original_GranaryID, string Original_Location, string Original_Unit, string Original_TypeOfSensor, int No) {
+            if ((Data == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(DataNumber));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Data));
             }
-            if ((SensorID == null)) {
+            if ((GranaryID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(GranaryID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(SensorID));
-            }
-            if ((Data == null)) {
+            if ((Location == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Data));
-            }
-            if ((Time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Time.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Location));
             }
             if ((Unit == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Unit));
+            }
+            if ((TypeOfSensor == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Unit));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(TypeOfSensor));
             }
-            if ((TypeOfSensor == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(TypeOfSensor));
-            }
-            if ((Original_DataNumber == null)) {
-                throw new global::System.ArgumentNullException("Original_DataNumber");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DataNumber));
-            }
-            if ((Original_SensorID == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_SensorID));
-            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_No));
             if ((Original_Data == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Data));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Data));
             }
-            if ((Original_Time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Time.Value));
+            if ((Original_GranaryID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_GranaryID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Location == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Location));
             }
             if ((Original_Unit == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Unit));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Unit));
             }
             if ((Original_TypeOfSensor == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_TypeOfSensor));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_TypeOfSensor));
             }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(No));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1306,8 +1269,8 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string SensorID, string Data, global::System.Nullable<global::System.DateTime> Time, string Unit, string TypeOfSensor, string Original_DataNumber, string Original_SensorID, string Original_Data, global::System.Nullable<global::System.DateTime> Original_Time, string Original_Unit, string Original_TypeOfSensor) {
-            return this.Update(Original_DataNumber, SensorID, Data, Time, Unit, TypeOfSensor, Original_DataNumber, Original_SensorID, Original_Data, Original_Time, Original_Unit, Original_TypeOfSensor);
+        public virtual int Update(string Data, global::System.Nullable<int> GranaryID, string Location, string Unit, string TypeOfSensor, int Original_No, string Original_Data, global::System.Nullable<int> Original_GranaryID, string Original_Location, string Original_Unit, string Original_TypeOfSensor) {
+            return this.Update(Data, GranaryID, Location, Unit, TypeOfSensor, Original_No, Original_Data, Original_GranaryID, Original_Location, Original_Unit, Original_TypeOfSensor, Original_No);
         }
     }
     
@@ -1323,7 +1286,7 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         
         private UpdateOrderOption _updateOrder;
         
-        private HistoryTableAdapter _historyTableAdapter;
+        private AlarmHistoryTableAdapter _alarmHistoryTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1345,12 +1308,12 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public HistoryTableAdapter HistoryTableAdapter {
+        public AlarmHistoryTableAdapter AlarmHistoryTableAdapter {
             get {
-                return this._historyTableAdapter;
+                return this._alarmHistoryTableAdapter;
             }
             set {
-                this._historyTableAdapter = value;
+                this._alarmHistoryTableAdapter = value;
             }
         }
         
@@ -1373,9 +1336,9 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._historyTableAdapter != null) 
-                            && (this._historyTableAdapter.Connection != null))) {
-                    return this._historyTableAdapter.Connection;
+                if (((this._alarmHistoryTableAdapter != null) 
+                            && (this._alarmHistoryTableAdapter.Connection != null))) {
+                    return this._alarmHistoryTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1390,7 +1353,7 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._historyTableAdapter != null)) {
+                if ((this._alarmHistoryTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1402,14 +1365,14 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(GranaryDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GranaryDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._historyTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.History.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._alarmHistoryTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.AlarmHistory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._historyTableAdapter.Update(updatedRows));
+                    result = (result + this._alarmHistoryTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1421,13 +1384,13 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(GranaryDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GranaryDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._historyTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.History.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._alarmHistoryTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.AlarmHistory.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._historyTableAdapter.Update(addedRows));
+                    result = (result + this._alarmHistoryTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1439,13 +1402,13 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(GranaryDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GranaryDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._historyTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.History.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._alarmHistoryTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.AlarmHistory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._historyTableAdapter.Update(deletedRows));
+                    result = (result + this._alarmHistoryTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1481,15 +1444,15 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(GranaryDataSet2 dataSet) {
+        public virtual int UpdateAll(GranaryDataSet3 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._historyTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._historyTableAdapter.Connection) == false))) {
+            if (((this._alarmHistoryTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._alarmHistoryTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("由 TableAdapterManager 管理的所有 TableAdapter 必须使用相同的连接字符串。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -1523,13 +1486,13 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._historyTableAdapter != null)) {
-                    revertConnections.Add(this._historyTableAdapter, this._historyTableAdapter.Connection);
-                    this._historyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._historyTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._historyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._historyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._historyTableAdapter.Adapter);
+                if ((this._alarmHistoryTableAdapter != null)) {
+                    revertConnections.Add(this._alarmHistoryTableAdapter, this._alarmHistoryTableAdapter.Connection);
+                    this._alarmHistoryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._alarmHistoryTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._alarmHistoryTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._alarmHistoryTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._alarmHistoryTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1590,9 +1553,9 @@ SELECT DataNumber, SensorID, Data, Time, Unit, TypeOfSensor FROM History WHERE (
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._historyTableAdapter != null)) {
-                    this._historyTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._historyTableAdapter]));
-                    this._historyTableAdapter.Transaction = null;
+                if ((this._alarmHistoryTableAdapter != null)) {
+                    this._alarmHistoryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._alarmHistoryTableAdapter]));
+                    this._alarmHistoryTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
