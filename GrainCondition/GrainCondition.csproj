@@ -45,10 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GrainDataSet.Designer.cs">
+    <Compile Include="GranaryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GrainDataSet.xsd</DependentUpon>
+      <DependentUpon>GranaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GranaryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GranaryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GranaryDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GranaryDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="History.cs">
       <SubType>Form</SubType>
@@ -70,21 +80,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GrainDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GrainDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SensorDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SensorDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SystemForm.cs">
+    <Compile Include="SystemConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemForm.Designer.cs">
-      <DependentUpon>SystemForm.cs</DependentUpon>
+    <Compile Include="SystemConfig.Designer.cs">
+      <DependentUpon>SystemConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="WindControl.cs">
       <SubType>Form</SubType>
@@ -110,22 +110,44 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SystemForm.resx">
-      <DependentUpon>SystemForm.cs</DependentUpon>
+    <EmbeddedResource Include="SystemConfig.resx">
+      <DependentUpon>SystemConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindControl.resx">
       <DependentUpon>WindControl.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="GrainDataSet.xsc">
-      <DependentUpon>GrainDataSet.xsd</DependentUpon>
+    <None Include="GranaryDataSet.xsc">
+      <DependentUpon>GranaryDataSet.xsd</DependentUpon>
     </None>
-    <None Include="GrainDataSet.xsd">
+    <None Include="GranaryDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GranaryDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-      <LastGenOutput>GrainDataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="GrainDataSet.xss">
-      <DependentUpon>GrainDataSet.xsd</DependentUpon>
+    <None Include="GranaryDataSet.xss">
+      <DependentUpon>GranaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GranaryDataSet1.xsc">
+      <DependentUpon>GranaryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GranaryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GranaryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GranaryDataSet1.xss">
+      <DependentUpon>GranaryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GranaryDataSet2.xsc">
+      <DependentUpon>GranaryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GranaryDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GranaryDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GranaryDataSet2.xss">
+      <DependentUpon>GranaryDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -136,17 +158,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SensorDataSet.xsc">
-      <DependentUpon>SensorDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SensorDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SensorDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SensorDataSet.xss">
-      <DependentUpon>SensorDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -22,8 +22,8 @@ namespace GrainCondition
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SystemForm .wind().Show();
-            SystemForm .wind().Activate();
+            SystemConfig .wind().Show();
+            SystemConfig .wind().Activate();
         }
 
         private void button3_Click(object sender, EventArgs e)

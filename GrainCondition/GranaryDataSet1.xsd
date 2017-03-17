@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="SensorDataSet" targetNamespace="http://tempuri.org/SensorDataSet.xsd" xmlns:mstns="http://tempuri.org/SensorDataSet.xsd" xmlns="http://tempuri.org/SensorDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="GranaryDataSet1" targetNamespace="http://tempuri.org/GranaryDataSet1.xsd" xmlns:mstns="http://tempuri.org/GranaryDataSet1.xsd" xmlns="http://tempuri.org/GranaryDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -76,7 +76,7 @@ SELECT SensorID, TypeOfSensor, Granary, Location FROM Sensor WHERE (SensorID = @
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="SensorDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SensorDataSet" msprop:Generator_UserDSName="SensorDataSet">
+  <xs:element name="GranaryDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GranaryDataSet1" msprop:Generator_UserDSName="GranaryDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Sensor" msprop:Generator_TableClassName="SensorDataTable" msprop:Generator_TableVarName="tableSensor" msprop:Generator_TablePropName="Sensor" msprop:Generator_RowDeletingName="SensorRowDeleting" msprop:Generator_RowChangingName="SensorRowChanging" msprop:Generator_RowEvHandlerName="SensorRowChangeEventHandler" msprop:Generator_RowDeletedName="SensorRowDeleted" msprop:Generator_UserTableName="Sensor" msprop:Generator_RowChangedName="SensorRowChanged" msprop:Generator_RowEvArgName="SensorRowChangeEvent" msprop:Generator_RowClassName="SensorRow">

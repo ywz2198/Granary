@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="GrainDataSet" targetNamespace="http://tempuri.org/GrainDataSet.xsd" xmlns:mstns="http://tempuri.org/GrainDataSet.xsd" xmlns="http://tempuri.org/GrainDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="GranaryDataSet" targetNamespace="http://tempuri.org/GranaryDataSet.xsd" xmlns:mstns="http://tempuri.org/GranaryDataSet.xsd" xmlns="http://tempuri.org/GranaryDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -76,10 +76,10 @@ SELECT GrainID, GranaryID, Location, KindOfGrain FROM Storage WHERE (GrainID = @
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="GrainDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GrainDataSet" msprop:Generator_UserDSName="GrainDataSet">
+  <xs:element name="GranaryDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GranaryDataSet" msprop:Generator_UserDSName="GranaryDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Storage" msprop:Generator_TableClassName="StorageDataTable" msprop:Generator_TableVarName="tableStorage" msprop:Generator_RowChangedName="StorageRowChanged" msprop:Generator_TablePropName="Storage" msprop:Generator_RowDeletingName="StorageRowDeleting" msprop:Generator_RowChangingName="StorageRowChanging" msprop:Generator_RowEvHandlerName="StorageRowChangeEventHandler" msprop:Generator_RowDeletedName="StorageRowDeleted" msprop:Generator_RowClassName="StorageRow" msprop:Generator_UserTableName="Storage" msprop:Generator_RowEvArgName="StorageRowChangeEvent">
+        <xs:element name="Storage" msprop:Generator_TableClassName="StorageDataTable" msprop:Generator_TableVarName="tableStorage" msprop:Generator_TablePropName="Storage" msprop:Generator_RowDeletingName="StorageRowDeleting" msprop:Generator_RowChangingName="StorageRowChanging" msprop:Generator_RowEvHandlerName="StorageRowChangeEventHandler" msprop:Generator_RowDeletedName="StorageRowDeleted" msprop:Generator_UserTableName="Storage" msprop:Generator_RowChangedName="StorageRowChanged" msprop:Generator_RowEvArgName="StorageRowChangeEvent" msprop:Generator_RowClassName="StorageRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GrainID" msprop:Generator_ColumnVarNameInTable="columnGrainID" msprop:Generator_ColumnPropNameInRow="GrainID" msprop:Generator_ColumnPropNameInTable="GrainIDColumn" msprop:Generator_UserColumnName="GrainID">
