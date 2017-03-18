@@ -193,6 +193,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\INIFILE\INIFILE.csproj">
+      <Project>{7a1bafdb-e8b8-4ffe-aaa6-a30a37a12f7a}</Project>
+      <Name>INIFILE</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

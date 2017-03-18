@@ -31,12 +31,26 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.textReceived = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbRcvStr = new System.Windows.Forms.RadioButton();
+            this.rbRcv16 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdSendStr = new System.Windows.Forms.RadioButton();
+            this.radio1 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbParity = new System.Windows.Forms.ComboBox();
+            this.cbStop = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbDataBits = new System.Windows.Forms.ComboBox();
-            this.COM = new System.Windows.Forms.ComboBox();
             this.bode = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbDataBits = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnSwitch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.COM = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grainIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,22 +86,11 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.storageTableAdapter = new GrainCondition.GranaryDataSetTableAdapters.StorageTableAdapter();
             this.sensorTableAdapter = new GrainCondition.GranaryDataSet1TableAdapters.SensorTableAdapter();
-            this.btnSwitch = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbStop = new System.Windows.Forms.ComboBox();
-            this.cbParity = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radio1 = new System.Windows.Forms.RadioButton();
-            this.rdSendStr = new System.Windows.Forms.RadioButton();
-            this.rbRcv16 = new System.Windows.Forms.RadioButton();
-            this.rbRcvStr = new System.Windows.Forms.RadioButton();
-            this.textReceived = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
@@ -101,9 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -136,23 +136,129 @@
             this.tabPage1.Text = "接口设置";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // textReceived
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "串口";
+            this.textReceived.Location = new System.Drawing.Point(433, 17);
+            this.textReceived.Name = "textReceived";
+            this.textReceived.Size = new System.Drawing.Size(424, 25);
+            this.textReceived.TabIndex = 12;
             // 
-            // label3
+            // groupBox3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(175, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "数据位";
+            this.groupBox3.Controls.Add(this.rbRcvStr);
+            this.groupBox3.Controls.Add(this.rbRcv16);
+            this.groupBox3.Location = new System.Drawing.Point(196, 178);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(168, 64);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "接收数据格式";
+            // 
+            // rbRcvStr
+            // 
+            this.rbRcvStr.AutoSize = true;
+            this.rbRcvStr.Location = new System.Drawing.Point(83, 25);
+            this.rbRcvStr.Name = "rbRcvStr";
+            this.rbRcvStr.Size = new System.Drawing.Size(73, 19);
+            this.rbRcvStr.TabIndex = 1;
+            this.rbRcvStr.TabStop = true;
+            this.rbRcvStr.Text = "字符串";
+            this.rbRcvStr.UseVisualStyleBackColor = true;
+            // 
+            // rbRcv16
+            // 
+            this.rbRcv16.AutoSize = true;
+            this.rbRcv16.Location = new System.Drawing.Point(7, 25);
+            this.rbRcv16.Name = "rbRcv16";
+            this.rbRcv16.Size = new System.Drawing.Size(74, 19);
+            this.rbRcv16.TabIndex = 0;
+            this.rbRcv16.TabStop = true;
+            this.rbRcv16.Text = "16进制";
+            this.rbRcv16.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdSendStr);
+            this.groupBox2.Controls.Add(this.radio1);
+            this.groupBox2.Location = new System.Drawing.Point(18, 178);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(157, 64);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "发送数据格式";
+            // 
+            // rdSendStr
+            // 
+            this.rdSendStr.AutoSize = true;
+            this.rdSendStr.Location = new System.Drawing.Point(78, 25);
+            this.rdSendStr.Name = "rdSendStr";
+            this.rdSendStr.Size = new System.Drawing.Size(73, 19);
+            this.rdSendStr.TabIndex = 1;
+            this.rdSendStr.TabStop = true;
+            this.rdSendStr.Text = "字符串";
+            this.rdSendStr.UseVisualStyleBackColor = true;
+            // 
+            // radio1
+            // 
+            this.radio1.AutoSize = true;
+            this.radio1.Location = new System.Drawing.Point(6, 25);
+            this.radio1.Name = "radio1";
+            this.radio1.Size = new System.Drawing.Size(74, 19);
+            this.radio1.TabIndex = 0;
+            this.radio1.TabStop = true;
+            this.radio1.Text = "16进制";
+            this.radio1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.cbParity);
+            this.groupBox1.Controls.Add(this.cbStop);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.bode);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cbDataBits);
+            this.groupBox1.Location = new System.Drawing.Point(18, 61);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(346, 110);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "串口设置";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(175, 71);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 15);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "校验位";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(9, 71);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 15);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "停止位";
+            // 
+            // cbParity
+            // 
+            this.cbParity.FormattingEnabled = true;
+            this.cbParity.Location = new System.Drawing.Point(246, 68);
+            this.cbParity.Name = "cbParity";
+            this.cbParity.Size = new System.Drawing.Size(70, 23);
+            this.cbParity.TabIndex = 7;
+            // 
+            // cbStop
+            // 
+            this.cbStop.FormattingEnabled = true;
+            this.cbStop.Location = new System.Drawing.Point(65, 65);
+            this.cbStop.Name = "cbStop";
+            this.cbStop.Size = new System.Drawing.Size(70, 23);
+            this.cbStop.TabIndex = 6;
             // 
             // label1
             // 
@@ -164,22 +270,6 @@
             this.label1.Text = "波特率";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // cbDataBits
-            // 
-            this.cbDataBits.FormattingEnabled = true;
-            this.cbDataBits.Location = new System.Drawing.Point(246, 18);
-            this.cbDataBits.Name = "cbDataBits";
-            this.cbDataBits.Size = new System.Drawing.Size(70, 23);
-            this.cbDataBits.TabIndex = 2;
-            // 
-            // COM
-            // 
-            this.COM.FormattingEnabled = true;
-            this.COM.Location = new System.Drawing.Point(90, 14);
-            this.COM.Name = "COM";
-            this.COM.Size = new System.Drawing.Size(77, 23);
-            this.COM.TabIndex = 1;
-            // 
             // bode
             // 
             this.bode.FormattingEnabled = true;
@@ -188,6 +278,60 @@
             this.bode.Size = new System.Drawing.Size(70, 23);
             this.bode.TabIndex = 0;
             this.bode.SelectedIndexChanged += new System.EventHandler(this.bode_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(175, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "数据位";
+            // 
+            // cbDataBits
+            // 
+            this.cbDataBits.FormattingEnabled = true;
+            this.cbDataBits.Location = new System.Drawing.Point(246, 18);
+            this.cbDataBits.Name = "cbDataBits";
+            this.cbDataBits.Size = new System.Drawing.Size(70, 23);
+            this.cbDataBits.TabIndex = 2;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(279, 17);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "保存设置";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnSwitch
+            // 
+            this.btnSwitch.Location = new System.Drawing.Point(198, 17);
+            this.btnSwitch.Name = "btnSwitch";
+            this.btnSwitch.Size = new System.Drawing.Size(75, 23);
+            this.btnSwitch.TabIndex = 7;
+            this.btnSwitch.Text = "打开串口";
+            this.btnSwitch.UseVisualStyleBackColor = true;
+            this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "串口";
+            // 
+            // COM
+            // 
+            this.COM.FormattingEnabled = true;
+            this.COM.Location = new System.Drawing.Point(90, 14);
+            this.COM.Name = "COM";
+            this.COM.Size = new System.Drawing.Size(77, 23);
+            this.COM.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -477,149 +621,6 @@
             // 
             this.sensorTableAdapter.ClearBeforeFill = true;
             // 
-            // btnSwitch
-            // 
-            this.btnSwitch.Location = new System.Drawing.Point(198, 17);
-            this.btnSwitch.Name = "btnSwitch";
-            this.btnSwitch.Size = new System.Drawing.Size(75, 23);
-            this.btnSwitch.TabIndex = 7;
-            this.btnSwitch.Text = "打开串口";
-            this.btnSwitch.UseVisualStyleBackColor = true;
-            this.btnSwitch.Click += new System.EventHandler(this.btnSwitch_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(279, 17);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "保存设置";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.cbParity);
-            this.groupBox1.Controls.Add(this.cbStop);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.bode);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cbDataBits);
-            this.groupBox1.Location = new System.Drawing.Point(18, 61);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 110);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "串口设置";
-            // 
-            // cbStop
-            // 
-            this.cbStop.FormattingEnabled = true;
-            this.cbStop.Location = new System.Drawing.Point(65, 65);
-            this.cbStop.Name = "cbStop";
-            this.cbStop.Size = new System.Drawing.Size(70, 23);
-            this.cbStop.TabIndex = 6;
-            // 
-            // cbParity
-            // 
-            this.cbParity.FormattingEnabled = true;
-            this.cbParity.Location = new System.Drawing.Point(246, 68);
-            this.cbParity.Name = "cbParity";
-            this.cbParity.Size = new System.Drawing.Size(70, 23);
-            this.cbParity.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 71);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 15);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "停止位";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(175, 71);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 15);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "校验位";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rdSendStr);
-            this.groupBox2.Controls.Add(this.radio1);
-            this.groupBox2.Location = new System.Drawing.Point(18, 178);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(157, 64);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "发送数据格式";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rbRcvStr);
-            this.groupBox3.Controls.Add(this.rbRcv16);
-            this.groupBox3.Location = new System.Drawing.Point(196, 178);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(168, 64);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "接收数据格式";
-            // 
-            // radio1
-            // 
-            this.radio1.AutoSize = true;
-            this.radio1.Location = new System.Drawing.Point(6, 25);
-            this.radio1.Name = "radio1";
-            this.radio1.Size = new System.Drawing.Size(74, 19);
-            this.radio1.TabIndex = 0;
-            this.radio1.TabStop = true;
-            this.radio1.Text = "16进制";
-            this.radio1.UseVisualStyleBackColor = true;
-            // 
-            // rdSendStr
-            // 
-            this.rdSendStr.AutoSize = true;
-            this.rdSendStr.Location = new System.Drawing.Point(78, 25);
-            this.rdSendStr.Name = "rdSendStr";
-            this.rdSendStr.Size = new System.Drawing.Size(73, 19);
-            this.rdSendStr.TabIndex = 1;
-            this.rdSendStr.TabStop = true;
-            this.rdSendStr.Text = "字符串";
-            this.rdSendStr.UseVisualStyleBackColor = true;
-            // 
-            // rbRcv16
-            // 
-            this.rbRcv16.AutoSize = true;
-            this.rbRcv16.Location = new System.Drawing.Point(7, 25);
-            this.rbRcv16.Name = "rbRcv16";
-            this.rbRcv16.Size = new System.Drawing.Size(74, 19);
-            this.rbRcv16.TabIndex = 0;
-            this.rbRcv16.TabStop = true;
-            this.rbRcv16.Text = "16进制";
-            this.rbRcv16.UseVisualStyleBackColor = true;
-            // 
-            // rbRcvStr
-            // 
-            this.rbRcvStr.AutoSize = true;
-            this.rbRcvStr.Location = new System.Drawing.Point(83, 25);
-            this.rbRcvStr.Name = "rbRcvStr";
-            this.rbRcvStr.Size = new System.Drawing.Size(73, 19);
-            this.rbRcvStr.TabIndex = 1;
-            this.rbRcvStr.TabStop = true;
-            this.rbRcvStr.Text = "字符串";
-            this.rbRcvStr.UseVisualStyleBackColor = true;
-            // 
-            // textReceived
-            // 
-            this.textReceived.Location = new System.Drawing.Point(433, 17);
-            this.textReceived.Name = "textReceived";
-            this.textReceived.Size = new System.Drawing.Size(424, 25);
-            this.textReceived.TabIndex = 12;
-            // 
             // SystemConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -632,6 +633,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -647,12 +654,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
