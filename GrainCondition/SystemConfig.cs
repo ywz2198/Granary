@@ -15,7 +15,7 @@ namespace GrainCondition
 {
     public partial class SystemConfig : Form
     {
-
+        
         SerialPort sp;
         private static SystemConfig frm = new SystemConfig();//一个窗口
         public static SystemConfig wind()
@@ -45,7 +45,7 @@ namespace GrainCondition
                 COM.Items.Add(s);
                 COM.SelectedIndex = 0;
             }
-            cbDataBits.SelectedIndex = 3;
+            cbDataBits.SelectedIndex = 0;
             cbStop.SelectedIndex = 0;
             cbParity.SelectedIndex = 0;
             radio1.Checked = true;
@@ -53,8 +53,8 @@ namespace GrainCondition
             //串口接收
             InitializeComponent();
         }
-
-        private static IniFiles _file;
+       
+        private static INIFILE.IniFiles _file;
         public static string G_BAUDRATE = "1200";//给ini文件赋新值，并且影响界面下拉框的显示  
         public static string G_DATABITS = "8";
         public static string G_STOP = "1";

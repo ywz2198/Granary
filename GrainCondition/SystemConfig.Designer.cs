@@ -247,6 +247,8 @@
             // cbParity
             // 
             this.cbParity.FormattingEnabled = true;
+            this.cbParity.Items.AddRange(new object[] {
+            "NONE"});
             this.cbParity.Location = new System.Drawing.Point(246, 68);
             this.cbParity.Name = "cbParity";
             this.cbParity.Size = new System.Drawing.Size(70, 23);
@@ -255,6 +257,8 @@
             // cbStop
             // 
             this.cbStop.FormattingEnabled = true;
+            this.cbStop.Items.AddRange(new object[] {
+            "1"});
             this.cbStop.Location = new System.Drawing.Point(65, 65);
             this.cbStop.Name = "cbStop";
             this.cbStop.Size = new System.Drawing.Size(70, 23);
@@ -291,6 +295,8 @@
             // cbDataBits
             // 
             this.cbDataBits.FormattingEnabled = true;
+            this.cbDataBits.Items.AddRange(new object[] {
+            "8"});
             this.cbDataBits.Location = new System.Drawing.Point(246, 18);
             this.cbDataBits.Name = "cbDataBits";
             this.cbDataBits.Size = new System.Drawing.Size(70, 23);

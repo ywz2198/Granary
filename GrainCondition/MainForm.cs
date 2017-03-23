@@ -35,8 +35,8 @@ namespace GrainCondition
 
         private void button1_Click(object sender, EventArgs e)
         {
-            History .wind().Show();
-            History .wind().Activate();
+            History his = new History() ;
+            his.ShowDialog();
         }
 
 
@@ -56,6 +56,11 @@ namespace GrainCondition
         {
             Power .wind().Show();
             Power .wind().Activate();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
