@@ -28,265 +28,209 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.granaryDataSet1 = new GrainCondition.GranaryDataSet();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.dataNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sensorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeOfSensorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.granaryDataSet2 = new GrainCondition.GranaryDataSet2();
-            this.historyTableAdapter = new GrainCondition.GranaryDataSet2TableAdapters.HistoryTableAdapter();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.granaryDataSet3 = new GrainCondition.GranaryDataSet3();
-            this.alarmHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alarmHistoryTableAdapter = new GrainCondition.GranaryDataSet3TableAdapters.AlarmHistoryTableAdapter();
-            this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.granaryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeOfSensorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet1)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.historyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alarmHistoryBindingSource)).BeginInit();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // chart1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(7, 30);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1010, 746);
-            this.tabControl1.TabIndex = 0;
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(12, 12);
+            this.chart1.Name = "chart1";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(1103, 634);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
-            // tabPage1
+            // comboBox1
             // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1002, 717);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1204, 61);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 1;
             // 
-            // dataGridView1
+            // comboBox2
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataNumberDataGridViewTextBoxColumn,
-            this.sensorIDDataGridViewTextBoxColumn,
-            this.dataDataGridViewTextBoxColumn,
-            this.timeDataGridViewTextBoxColumn,
-            this.unitDataGridViewTextBoxColumn,
-            this.typeOfSensorDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.historyBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(977, 704);
-            this.dataGridView1.TabIndex = 0;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1204, 103);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 23);
+            this.comboBox2.TabIndex = 2;
             // 
-            // tabPage2
+            // comboBox3
             // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1002, 717);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(1204, 145);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 23);
+            this.comboBox3.TabIndex = 3;
             // 
-            // granaryDataSet1
+            // comboBox4
             // 
-            this.granaryDataSet1.DataSetName = "GranaryDataSet";
-            this.granaryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(1204, 187);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 23);
+            this.comboBox4.TabIndex = 4;
             // 
-            // fillByToolStrip
+            // label1
             // 
-            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(993, 27);
-            this.fillByToolStrip.TabIndex = 1;
-            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1138, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "仓库";
             // 
-            // fillByToolStripButton
+            // label2
             // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(58, 24);
-            this.fillByToolStripButton.Text = "按时间";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1138, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "组";
             // 
-            // dataNumberDataGridViewTextBoxColumn
+            // label3
             // 
-            this.dataNumberDataGridViewTextBoxColumn.DataPropertyName = "DataNumber";
-            this.dataNumberDataGridViewTextBoxColumn.HeaderText = "DataNumber";
-            this.dataNumberDataGridViewTextBoxColumn.Name = "dataNumberDataGridViewTextBoxColumn";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1138, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 15);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "缆";
             // 
-            // sensorIDDataGridViewTextBoxColumn
+            // label4
             // 
-            this.sensorIDDataGridViewTextBoxColumn.DataPropertyName = "SensorID";
-            this.sensorIDDataGridViewTextBoxColumn.HeaderText = "SensorID";
-            this.sensorIDDataGridViewTextBoxColumn.Name = "sensorIDDataGridViewTextBoxColumn";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1138, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "层";
             // 
-            // dataDataGridViewTextBoxColumn
+            // label5
             // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1138, 232);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 15);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "种类";
             // 
-            // timeDataGridViewTextBoxColumn
+            // comboBox5
             // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(1204, 229);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 23);
+            this.comboBox5.TabIndex = 10;
             // 
-            // unitDataGridViewTextBoxColumn
+            // dateTimePicker1
             // 
-            this.unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
-            this.unitDataGridViewTextBoxColumn.HeaderText = "Unit";
-            this.unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1141, 311);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker1.TabIndex = 11;
             // 
-            // typeOfSensorDataGridViewTextBoxColumn
+            // dateTimePicker2
             // 
-            this.typeOfSensorDataGridViewTextBoxColumn.DataPropertyName = "TypeOfSensor";
-            this.typeOfSensorDataGridViewTextBoxColumn.HeaderText = "TypeOfSensor";
-            this.typeOfSensorDataGridViewTextBoxColumn.Name = "typeOfSensorDataGridViewTextBoxColumn";
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(1141, 385);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker2.TabIndex = 12;
             // 
-            // historyBindingSource
+            // label6
             // 
-            this.historyBindingSource.DataMember = "History";
-            this.historyBindingSource.DataSource = this.granaryDataSet2;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1141, 290);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 15);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "开始时间";
             // 
-            // granaryDataSet2
+            // label7
             // 
-            this.granaryDataSet2.DataSetName = "GranaryDataSet2";
-            this.granaryDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1141, 364);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 15);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "结束时间";
             // 
-            // historyTableAdapter
+            // button1
             // 
-            this.historyTableAdapter.ClearBeforeFill = true;
+            this.button1.Location = new System.Drawing.Point(1141, 445);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 32);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "显示";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // button2
             // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.noDataGridViewTextBoxColumn,
-            this.dataDataGridViewTextBoxColumn1,
-            this.granaryIDDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn,
-            this.unitDataGridViewTextBoxColumn1,
-            this.typeOfSensorDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.alarmHistoryBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(964, 693);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // granaryDataSet3
-            // 
-            this.granaryDataSet3.DataSetName = "GranaryDataSet3";
-            this.granaryDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // alarmHistoryBindingSource
-            // 
-            this.alarmHistoryBindingSource.DataMember = "AlarmHistory";
-            this.alarmHistoryBindingSource.DataSource = this.granaryDataSet3;
-            // 
-            // alarmHistoryTableAdapter
-            // 
-            this.alarmHistoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // noDataGridViewTextBoxColumn
-            // 
-            this.noDataGridViewTextBoxColumn.DataPropertyName = "No";
-            this.noDataGridViewTextBoxColumn.HeaderText = "No";
-            this.noDataGridViewTextBoxColumn.Name = "noDataGridViewTextBoxColumn";
-            this.noDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataDataGridViewTextBoxColumn1
-            // 
-            this.dataDataGridViewTextBoxColumn1.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn1.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn1.Name = "dataDataGridViewTextBoxColumn1";
-            // 
-            // granaryIDDataGridViewTextBoxColumn
-            // 
-            this.granaryIDDataGridViewTextBoxColumn.DataPropertyName = "GranaryID";
-            this.granaryIDDataGridViewTextBoxColumn.HeaderText = "GranaryID";
-            this.granaryIDDataGridViewTextBoxColumn.Name = "granaryIDDataGridViewTextBoxColumn";
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            // 
-            // unitDataGridViewTextBoxColumn1
-            // 
-            this.unitDataGridViewTextBoxColumn1.DataPropertyName = "Unit";
-            this.unitDataGridViewTextBoxColumn1.HeaderText = "Unit";
-            this.unitDataGridViewTextBoxColumn1.Name = "unitDataGridViewTextBoxColumn1";
-            // 
-            // typeOfSensorDataGridViewTextBoxColumn1
-            // 
-            this.typeOfSensorDataGridViewTextBoxColumn1.DataPropertyName = "TypeOfSensor";
-            this.typeOfSensorDataGridViewTextBoxColumn1.HeaderText = "TypeOfSensor";
-            this.typeOfSensorDataGridViewTextBoxColumn1.Name = "typeOfSensorDataGridViewTextBoxColumn1";
+            this.button2.Location = new System.Drawing.Point(1141, 502);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 32);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "打印/预览";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 794);
-            this.Controls.Add(this.fillByToolStrip);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1401, 658);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.chart1);
             this.Name = "History";
             this.Text = "History";
-            this.Load += new System.EventHandler(this.History_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet1)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.historyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alarmHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,31 +238,22 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private GranaryDataSet2 granaryDataSet2;
-        private System.Windows.Forms.BindingSource historyBindingSource;
-        private GranaryDataSet2TableAdapters.HistoryTableAdapter historyTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sensorIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfSensorDataGridViewTextBoxColumn;
-        private GranaryDataSet granaryDataSet1;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private GranaryDataSet3 granaryDataSet3;
-        private System.Windows.Forms.BindingSource alarmHistoryBindingSource;
-        private GranaryDataSet3TableAdapters.AlarmHistoryTableAdapter alarmHistoryTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn granaryIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfSensorDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textReceived = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rbRcvStr = new System.Windows.Forms.RadioButton();
-            this.rbRcv16 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdSendStr = new System.Windows.Forms.RadioButton();
-            this.radio1 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,13 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.COM = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.grainIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.granaryIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kindOfGrainDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.granaryDataSet = new GrainCondition.GranaryDataSet();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,13 +54,6 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.sensorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeOfSensorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.granaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sensorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.granaryDataSet1 = new GrainCondition.GranaryDataSet1();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -84,21 +63,10 @@
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.storageTableAdapter = new GrainCondition.GranaryDataSetTableAdapters.StorageTableAdapter();
-            this.sensorTableAdapter = new GrainCondition.GranaryDataSet1TableAdapters.SensorTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet1)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -121,8 +89,6 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.textReceived);
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.btnSave);
             this.tabPage1.Controls.Add(this.btnSwitch);
@@ -142,72 +108,6 @@
             this.textReceived.Name = "textReceived";
             this.textReceived.Size = new System.Drawing.Size(424, 25);
             this.textReceived.TabIndex = 12;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rbRcvStr);
-            this.groupBox3.Controls.Add(this.rbRcv16);
-            this.groupBox3.Location = new System.Drawing.Point(196, 178);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(168, 64);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "接收数据格式";
-            // 
-            // rbRcvStr
-            // 
-            this.rbRcvStr.AutoSize = true;
-            this.rbRcvStr.Location = new System.Drawing.Point(83, 25);
-            this.rbRcvStr.Name = "rbRcvStr";
-            this.rbRcvStr.Size = new System.Drawing.Size(73, 19);
-            this.rbRcvStr.TabIndex = 1;
-            this.rbRcvStr.TabStop = true;
-            this.rbRcvStr.Text = "字符串";
-            this.rbRcvStr.UseVisualStyleBackColor = true;
-            // 
-            // rbRcv16
-            // 
-            this.rbRcv16.AutoSize = true;
-            this.rbRcv16.Location = new System.Drawing.Point(7, 25);
-            this.rbRcv16.Name = "rbRcv16";
-            this.rbRcv16.Size = new System.Drawing.Size(74, 19);
-            this.rbRcv16.TabIndex = 0;
-            this.rbRcv16.TabStop = true;
-            this.rbRcv16.Text = "16进制";
-            this.rbRcv16.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rdSendStr);
-            this.groupBox2.Controls.Add(this.radio1);
-            this.groupBox2.Location = new System.Drawing.Point(18, 178);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(157, 64);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "发送数据格式";
-            // 
-            // rdSendStr
-            // 
-            this.rdSendStr.AutoSize = true;
-            this.rdSendStr.Location = new System.Drawing.Point(78, 25);
-            this.rdSendStr.Name = "rdSendStr";
-            this.rdSendStr.Size = new System.Drawing.Size(73, 19);
-            this.rdSendStr.TabIndex = 1;
-            this.rdSendStr.TabStop = true;
-            this.rdSendStr.Text = "字符串";
-            this.rdSendStr.UseVisualStyleBackColor = true;
-            // 
-            // radio1
-            // 
-            this.radio1.AutoSize = true;
-            this.radio1.Location = new System.Drawing.Point(6, 25);
-            this.radio1.Name = "radio1";
-            this.radio1.Size = new System.Drawing.Size(74, 19);
-            this.radio1.TabIndex = 0;
-            this.radio1.TabStop = true;
-            this.radio1.Text = "16进制";
-            this.radio1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -341,7 +241,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
@@ -357,56 +256,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "储粮信息";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.grainIDDataGridViewTextBoxColumn,
-            this.granaryIDDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn,
-            this.kindOfGrainDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.storageBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(354, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(575, 329);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // grainIDDataGridViewTextBoxColumn
-            // 
-            this.grainIDDataGridViewTextBoxColumn.DataPropertyName = "GrainID";
-            this.grainIDDataGridViewTextBoxColumn.HeaderText = "GrainID";
-            this.grainIDDataGridViewTextBoxColumn.Name = "grainIDDataGridViewTextBoxColumn";
-            // 
-            // granaryIDDataGridViewTextBoxColumn
-            // 
-            this.granaryIDDataGridViewTextBoxColumn.DataPropertyName = "GranaryID";
-            this.granaryIDDataGridViewTextBoxColumn.HeaderText = "GranaryID";
-            this.granaryIDDataGridViewTextBoxColumn.Name = "granaryIDDataGridViewTextBoxColumn";
-            // 
-            // locationDataGridViewTextBoxColumn
-            // 
-            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
-            // 
-            // kindOfGrainDataGridViewTextBoxColumn
-            // 
-            this.kindOfGrainDataGridViewTextBoxColumn.DataPropertyName = "KindOfGrain";
-            this.kindOfGrainDataGridViewTextBoxColumn.HeaderText = "KindOfGrain";
-            this.kindOfGrainDataGridViewTextBoxColumn.Name = "kindOfGrainDataGridViewTextBoxColumn";
-            // 
-            // storageBindingSource
-            // 
-            this.storageBindingSource.DataMember = "Storage";
-            this.storageBindingSource.DataSource = this.granaryDataSet;
-            // 
-            // granaryDataSet
-            // 
-            this.granaryDataSet.DataSetName = "GranaryDataSet";
-            this.granaryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label7
             // 
@@ -478,7 +327,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -486,56 +334,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "传感器分布";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sensorIDDataGridViewTextBoxColumn,
-            this.typeOfSensorDataGridViewTextBoxColumn,
-            this.granaryDataGridViewTextBoxColumn,
-            this.locationDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.sensorBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(158, 52);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(623, 268);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // sensorIDDataGridViewTextBoxColumn
-            // 
-            this.sensorIDDataGridViewTextBoxColumn.DataPropertyName = "SensorID";
-            this.sensorIDDataGridViewTextBoxColumn.HeaderText = "SensorID";
-            this.sensorIDDataGridViewTextBoxColumn.Name = "sensorIDDataGridViewTextBoxColumn";
-            // 
-            // typeOfSensorDataGridViewTextBoxColumn
-            // 
-            this.typeOfSensorDataGridViewTextBoxColumn.DataPropertyName = "TypeOfSensor";
-            this.typeOfSensorDataGridViewTextBoxColumn.HeaderText = "TypeOfSensor";
-            this.typeOfSensorDataGridViewTextBoxColumn.Name = "typeOfSensorDataGridViewTextBoxColumn";
-            // 
-            // granaryDataGridViewTextBoxColumn
-            // 
-            this.granaryDataGridViewTextBoxColumn.DataPropertyName = "Granary";
-            this.granaryDataGridViewTextBoxColumn.HeaderText = "Granary";
-            this.granaryDataGridViewTextBoxColumn.Name = "granaryDataGridViewTextBoxColumn";
-            // 
-            // locationDataGridViewTextBoxColumn1
-            // 
-            this.locationDataGridViewTextBoxColumn1.DataPropertyName = "Location";
-            this.locationDataGridViewTextBoxColumn1.HeaderText = "Location";
-            this.locationDataGridViewTextBoxColumn1.Name = "locationDataGridViewTextBoxColumn1";
-            // 
-            // sensorBindingSource
-            // 
-            this.sensorBindingSource.DataMember = "Sensor";
-            this.sensorBindingSource.DataSource = this.granaryDataSet1;
-            // 
-            // granaryDataSet1
-            // 
-            this.granaryDataSet1.DataSetName = "GranaryDataSet1";
-            this.granaryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage4
             // 
@@ -619,14 +417,6 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 25);
             this.numericUpDown1.TabIndex = 0;
             // 
-            // storageTableAdapter
-            // 
-            this.storageTableAdapter.ClearBeforeFill = true;
-            // 
-            // sensorTableAdapter
-            // 
-            this.sensorTableAdapter.ClearBeforeFill = true;
-            // 
             // SystemConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -639,21 +429,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storageBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sensorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.granaryDataSet1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
@@ -685,22 +464,6 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private GranaryDataSet granaryDataSet;
-        private System.Windows.Forms.BindingSource storageBindingSource;
-        private GranaryDataSetTableAdapters.StorageTableAdapter storageTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grainIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn granaryIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kindOfGrainDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private GranaryDataSet1 granaryDataSet1;
-        private System.Windows.Forms.BindingSource sensorBindingSource;
-        private GranaryDataSet1TableAdapters.SensorTableAdapter sensorTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sensorIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeOfSensorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn granaryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -711,12 +474,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnSwitch;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rbRcvStr;
-        private System.Windows.Forms.RadioButton rbRcv16;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton rdSendStr;
-        private System.Windows.Forms.RadioButton radio1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;

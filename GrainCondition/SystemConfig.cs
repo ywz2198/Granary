@@ -34,22 +34,14 @@ namespace GrainCondition
             sp = new SerialPort();
             //准备串口内容
             Control.CheckForIllegalCrossThreadCalls = false;
-            int[] item = { 9600, 115200 };
-            foreach (int a in item)
-            {
-                bode.Items.Add(a.ToString());
-            }
-            bode.SelectedItem = bode.Items[0];
+           
+            
             foreach (string s in System.IO.Ports.SerialPort.GetPortNames())
             {
                 COM.Items.Add(s);
                 COM.SelectedIndex = 0;
             }
-            cbDataBits.SelectedIndex = 0;
-            cbStop.SelectedIndex = 0;
-            cbParity.SelectedIndex = 0;
-            radio1.Checked = true;
-            rbRcvStr.Checked = true;
+            
             //串口接收
             InitializeComponent();
         }
@@ -87,13 +79,22 @@ namespace GrainCondition
 
         private void SystemConfig_Load(object sender, EventArgs e)
         {
-            // TODO: 这行代码将数据加载到表“granaryDataSet1.Sensor”中。您可以根据需要移动或删除它。
-            this.sensorTableAdapter.Fill(this.granaryDataSet1.Sensor);
-            // TODO: 这行代码将数据加载到表“granaryDataSet.Storage”中。您可以根据需要移动或删除它。
-            this.storageTableAdapter.Fill(this.granaryDataSet.Storage);
+           
             Control.CheckForIllegalCrossThreadCalls = false;
             sp.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
             LoadProfile();
+            int[] item = { 9600, 115200 };
+            foreach (int a in item)
+            {
+                bode.Items.Add(a.ToString());
+            }
+            bode.SelectedIndex = 0;
+            cbDataBits.SelectedIndex = 0;
+            cbStop.SelectedIndex = 0;
+            cbParity.SelectedIndex = 0;
+           
+            bode.SelectedItem = bode.Items[0];
+         
 
 
         }
@@ -103,13 +104,11 @@ namespace GrainCondition
             if (sp.IsOpen)
             {
                 byte[] byteRead = new byte[sp.BytesToRead];
-                if (rdSendStr.Checked)
-                {
+               
                     textReceived.Text += sp.ReadLine() + "\r\n";
                     sp.DiscardInBuffer();
-                }
-                else
-                {
+                
+               
                     try
                     {
                         Byte[] receivedData = new Byte[sp.BytesToRead];
@@ -128,7 +127,7 @@ namespace GrainCondition
                         MessageBox.Show(ex.Message, "出错");
                         textReceived.Text = "";
                     }
-                }
+                
             }
             else
             {
@@ -176,6 +175,11 @@ namespace GrainCondition
                     break;
             }
             SaveProfile();
+
+        }
+
+        private void sensorBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
 
         }
     }
