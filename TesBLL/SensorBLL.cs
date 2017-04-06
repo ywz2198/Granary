@@ -47,11 +47,29 @@ namespace Tes.BLL
 				throw;
 			}
 		}
-
-		/// 添加数据
-		/// </summary>
-		/// <param name="info">数据表实体对象</param>
-		public static bool AddSensor(SensorInfo info)
+        //根据时间获取数据
+        /// <summary>
+        /// 用日期获取数据
+        /// </summary>
+        /// <param name="datetime1"></param>
+        /// <param name="datetime2"></param>
+        /// <returns></returns>
+        public static List<SensorInfo> GetDataByDatetime(DateTime datetime1, DateTime datetime2)
+        {
+            try
+            {
+                return SensorDAL.GetDataByDatetime(datetime1, datetime2);
+                
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        /// 添加数据
+        /// </summary>
+        /// <param name="info">数据表实体对象</param>
+        public static bool AddSensor(SensorInfo info)
 		{
 			try
 			{

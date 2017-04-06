@@ -41,6 +41,7 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="SensorDAL.cs" />

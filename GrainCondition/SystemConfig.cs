@@ -9,14 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Xml;
-using INIFILE;
-
+using Tes.Model;
+using Tes.BLL;
+using System.Runtime.InteropServices;
 namespace GrainCondition
 {
     public partial class SystemConfig : Form
     {
-        
-        SerialPort sp;
+
+        [DllImport("kernel32")]
+        private static extern bool WritePrivateProfileString(string section, string key, string val, string filePath);
+        [DllImport("kernel32")]
+        private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
         private static SystemConfig frm = new SystemConfig();//一个窗口
         public static SystemConfig wind()
         {
@@ -28,112 +32,27 @@ namespace GrainCondition
             else
                 return frm;
         }
+        StringBuilder temp = new StringBuilder(255);
+        StringBuilder baud = new StringBuilder(255);
+        StorageInfo si;
         public SystemConfig()
         {
             
-            sp = new SerialPort();
-            //准备串口内容
-            Control.CheckForIllegalCrossThreadCalls = false;
-           
-            
-            foreach (string s in System.IO.Ports.SerialPort.GetPortNames())
-            {
-                COM.Items.Add(s);
-                COM.SelectedIndex = 0;
-            }
-            
-            //串口接收
+            GetPrivateProfileString("Data", "Port", "COM1", temp, 255, filename);
+            GetPrivateProfileString("Data", "Baud", "9600", baud, 255, filename);
             InitializeComponent();
-        }
-       
-        private static INIFILE.IniFiles _file;
-        public static string G_BAUDRATE = "1200";//给ini文件赋新值，并且影响界面下拉框的显示  
-        public static string G_DATABITS = "8";
-        public static string G_STOP = "1";
-        public static string G_PARITY = "NONE";
-        public static void LoadProfile()
-        {
-
-            string strPath = AppDomain.CurrentDomain.BaseDirectory;
-            _file = new IniFiles(strPath + "Cfg.ini");
-            G_BAUDRATE = _file.ReadString("CONFIG", "BaudRate", "4800");
-            G_DATABITS = _file.ReadString("CONFIG", "DataBits", "8");
-            G_STOP = _file.ReadString("CONFIG", "StopBits", "1");
-            G_PARITY = _file.ReadString("CONFIG", "Parity", "NONE");
-        }
-        public static void SaveProfile()
-        {
-
-            string strPath = AppDomain.CurrentDomain.BaseDirectory;
-            IniFiles _file = new IniFiles(strPath + "Cfg.ini");
-            _file.WriteString("CONFIG", "BaudRate", G_BAUDRATE);
-            _file.WriteString("CONFIG", "DataBits", G_DATABITS);
-            _file.WriteString("CONFIG", "StopBits", G_STOP);
-            _file.WriteString("CONFIG", "Parity", G_PARITY);
-
-        }
-       
-
-
-
-
-        private void SystemConfig_Load(object sender, EventArgs e)
-        {
-           
             Control.CheckForIllegalCrossThreadCalls = false;
-            sp.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
-            LoadProfile();
             int[] item = { 9600, 115200 };
             foreach (int a in item)
             {
                 bode.Items.Add(a.ToString());
             }
-            bode.SelectedIndex = 0;
-            cbDataBits.SelectedIndex = 0;
-            cbStop.SelectedIndex = 0;
-            cbParity.SelectedIndex = 0;
-           
-            bode.SelectedItem = bode.Items[0];
-         
-
-
+            bode.Text = baud.ToString();
+            
         }
-
-        void sp_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            if (sp.IsOpen)
-            {
-                byte[] byteRead = new byte[sp.BytesToRead];
-               
-                    textReceived.Text += sp.ReadLine() + "\r\n";
-                    sp.DiscardInBuffer();
-                
-               
-                    try
-                    {
-                        Byte[] receivedData = new Byte[sp.BytesToRead];
-                        sp.Read(receivedData, 0, receivedData.Length);
-                        sp.DiscardInBuffer();
-                        string strRcv = null;
-                        for (int i = 0; i < receivedData.Length; i++)
-                        {
-                            strRcv += receivedData[i].ToString("X2");
-
-                        }
-                        textReceived.Text += strRcv + "\r\n";
-                    }
-                    catch (System.Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "出错");
-                        textReceived.Text = "";
-                    }
-                
-            }
-            else
-            {
-                MessageBox.Show("请打开串口");
-            }
-        }
+       
+       
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -143,45 +62,119 @@ namespace GrainCondition
         {
 
         }
-
+        SerialPort sp = new SerialPort();
+        string filename = System.AppDomain.CurrentDomain.BaseDirectory + "control.ini";
         private void btnSwitch_Click(object sender, EventArgs e)
         {
 
+            if (!sp.IsOpen)
+            { 
+            sp.PortName = COM.Text;
+            sp.BaudRate = Convert.ToInt32(bode.Text);
             sp.Open();
-            if (sp.IsOpen)
-                MessageBox.Show("串口启动");
-        }
+                btnSwitch.Text = "Close";
+            }
+            else
+            {
+                sp.Close();
+                btnSwitch.Text = "Open";
+            }
 
+        }
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string strBaudRate = bode.Text;
-            string strDateBits = cbDataBits.Text;
-            string strStopBits = cbStop.Text;
-            Int32 iBaudRate = Convert.ToInt32(strBaudRate);
-            Int32 iDateBits = Convert.ToInt32(strDateBits);
-            G_BAUDRATE = iBaudRate + "";
-            G_DATABITS = iDateBits + "";
-            G_STOP = cbStop.Text;
-            switch (cbParity.Text)
-            {
-                case "无":
-                    G_PARITY = "NONE";
-                    break;
-                case "0":
-                    G_PARITY = "0";
-                    break;
-                case "1":
-                    G_PARITY = "1";
-                    break;
-            }
-            SaveProfile();
+            if (WritePrivateProfileString("Data", "Port", COM.Text, filename)&WritePrivateProfileString ("Data","Baud",bode.Text,filename))
+                MessageBox.Show("ok");
+
 
         }
 
-        private void sensorBindingSource_CurrentChanged(object sender, EventArgs e)
+       
+
+        private void SystemConfig_Load(object sender, EventArgs e)
         {
-
+            string[] ports = SerialPort.GetPortNames();
+            COM.Items.AddRange(ports);
+            COM.Text = temp.ToString();
         }
+
+        private void ADDbtn_Click(object sender, EventArgs e)
+        {
+            si = new StorageInfo()
+            {
+                GrainID = Convert.ToInt32(NO.Text),
+                KindOfGrain = Kind.Text,
+                Keeper = Keeper.Text,
+                Storage = Intime.Value.ToShortDateString(),
+                Out = Outtime.Value.ToShortDateString(),
+                Weight = Convert.ToInt32(Weight.Text),
+                Water = float.Parse(Water.Text),
+                Dirt = float.Parse(Dirt.Text),
+                Incomplete = float.Parse(Incomplete.Text),
+                Property = Property.Text,
+                Level = Level.Text,
+                Info = OtherInfo.Text,
+                GrowingPlace = Place.Text,
+                Other = Other.Text
+            };
+            string messageStr = "";
+            if (StorageBLL.AddStorage(si))
+            {
+                MessageBox.Show("yes");
+            }
+            else
+            {
+                MessageBox.Show(messageStr);
+
+            }
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            si = new StorageInfo()
+            {
+                GrainID = Convert.ToInt32(NO.Text),
+                KindOfGrain = Kind.Text,
+                Keeper = Keeper.Text,
+                Storage = Intime.Value.ToShortDateString(),
+                Out = Outtime.Value.ToShortDateString(),
+                Weight = Convert.ToInt32(Weight.Text),
+                Water = float.Parse(Water.Text),
+                Dirt = float.Parse(Dirt.Text),
+                Incomplete = float.Parse(Incomplete.Text),
+                Property = Property.Text,
+                Level = Level.Text,
+                Info = OtherInfo.Text,
+                GrowingPlace = Place.Text,
+                Other = Other.Text
+
+
+            };
+            if (StorageBLL.UpdateStorageInfo(si))
+                MessageBox.Show("OK");
+        }
+
+        private void ReadWithNO_Click(object sender, EventArgs e)
+        {
+           
+            StorageInfo ss = StorageBLL.GetStorageInfoById(Convert.ToInt32(NO.Text));
+            Kind.Text = ss.KindOfGrain;
+            Keeper.Text = ss.Keeper;
+            Weight.Text = ss.Weight.ToString();
+            Water.Text = ss.Water.ToString();
+            Dirt.Text = ss.Dirt.ToString();
+            Incomplete.Text = ss.Incomplete.ToString();
+            Property.Text = ss.Property;
+            Level.Text = ss.Level;
+            OtherInfo.Text = ss.Info;
+            Place.Text = ss.GrowingPlace;
+            Other.Text = ss.Other;
+            Intime.Value = Convert.ToDateTime(ss.Storage);
+            Outtime.Value = Convert.ToDateTime(ss.Out);
+        }
+
+        
     }
 }
 

@@ -16,7 +16,7 @@ namespace GrainCondition
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new History ());
+            Application.Run(new MainForm ());
         }
     }
 }

@@ -63,12 +63,13 @@ namespace Tes.BLL
 			}
 		}
 
-		/// <summary>
-		/// 根据主键删除一个对象
-		/// </summary>
-		/// <param name="_GrainID">主键</param>
-		/// <returns></returns>
-		public static bool DeleteStorageInfo(StorageInfo info)
+      
+        /// <summary>
+        /// 根据主键删除一个对象
+        /// </summary>
+        /// <param name="_GrainID">主键</param>
+        /// <returns></returns>
+        public static bool DeleteStorageInfo(StorageInfo info)
 		{
 			try
 			{

@@ -70,14 +70,52 @@ namespace Tes.DAL
 				info.Group=int.Parse(reader["Group"].ToString());
 				info.Line=int.Parse(reader["Line"].ToString());
 				info.Floor=int.Parse(reader["Floor"].ToString());
-				info.Data=float.Parse(reader["Data"].ToString());
+				info.Data=decimal .Parse(reader["Data"].ToString());
 				info.Time=reader["Time"].ToString();
 				infoList.Add(info);
 			}
 			reader.Close();
 			return infoList;
 		}
+        //从时间获取数据
+        public static List<SensorInfo > GetDataByDatetime(DateTime datetime1,DateTime datetime2)
+        {
+            List<SensorInfo > data = new List<SensorInfo >();
+            SqlDataReader reader;
+            string date1 = datetime1.ToString();
+            string date2 = datetime2.ToString();
+            
 
+            string sqlstr ="[Group]=1 and Time BETWEEN CONVERT(datetime,'"+date1+ "',120) and CONVERT(datetime,'"+date2+"',120)";
+            try
+            {
+              reader =  GetSensorInfo(sqlstr);
+            }
+            
+            catch(Exception)
+            {
+                throw;
+            }
+            while(reader.Read())
+            {
+                SensorInfo x = new SensorInfo();
+                
+                x.DataID = int.Parse(reader["DataID"].ToString());
+                x.TypeOfSensor = reader["TypeOfSensor"].ToString();
+                x.Granary = int.Parse(reader["Granary"].ToString());
+                x.Group = int.Parse(reader["Group"].ToString());
+                x.Line = int.Parse(reader["Line"].ToString());
+                x.Floor = int.Parse(reader["Floor"].ToString());
+                x.Data = decimal.Parse(reader["Data"].ToString());
+                x.Time = reader["Time"].ToString();
+                
+                data.Add(x);
+            }
+            reader.Close();
+            return data;
+
+
+        }
 		/// <summary>
 		/// 根据 主键 获取一个实体对象
 		/// <param name="DataID">主键</param>
@@ -101,7 +139,7 @@ namespace Tes.DAL
 			int _Group = info.Group;
 			int _Line = info.Line;
 			int _Floor = info.Floor;
-			float _Data = info.Data;
+			decimal  _Data = info.Data;
 			string _Time = info.Time;
 
 			string sql="INSERT INTO Sensor VALUES (@_TypeOfSensor,@_Granary,@_Group,@_Line,@_Floor,@_Data,@_Time)";
@@ -142,7 +180,7 @@ namespace Tes.DAL
 			int _Group = info.Group;
 			int _Line = info.Line;
 			int _Floor = info.Floor;
-			float _Data = info.Data;
+			decimal  _Data = info.Data;
 			string _Time = info.Time;
 			string sql="UPDATE Sensor SET TypeOfSensor=@_TypeOfSensor, Granary=@_Granary, Group=@_Group, Line=@_Line, Floor=@_Floor, Data=@_Data, Time=@_Time  WHERE DataID="+info.DataID;
 			int rst = DBManager.ExecuteUpdate(sql, new object[] { new SqlParameter("@_TypeOfSensor",_TypeOfSensor),new SqlParameter("@_Granary",_Granary),new SqlParameter("@_Group",_Group),new SqlParameter("@_Line",_Line),new SqlParameter("@_Floor",_Floor),new SqlParameter("@_Data",_Data),new SqlParameter("@_Time",_Time) });

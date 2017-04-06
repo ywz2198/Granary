@@ -72,11 +72,11 @@ namespace Tes.Model
 			set { _Floor = value; }
 		}
 
-		private float _Data;
+		private decimal  _Data;
 		/// <summary>
 		/// 获取或设置 Data 的值
 		/// </summary>
-		public float Data
+		public decimal  Data
 		{
 			get { return _Data; }
 			set { _Data = value; }
